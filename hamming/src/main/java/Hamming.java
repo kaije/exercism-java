@@ -11,9 +11,8 @@ class Hamming {
     this.rightStrand = rightStrand;
   }
 
-  long getHammingDistance() {
-    IntStream stream = IntStream.range(0, this.leftStrand.length());
-    return stream.filter(i -> this.leftStrand.charAt(i) != this.rightStrand.charAt(i)).count();
+  int getHammingDistance() {
+    return (int) IntStream.range(0, this.leftStrand.length()).filter(i -> this.leftStrand.charAt(i) != this.rightStrand.charAt(i)).count();
   }
 
   void validateInput(String leftStrand, String rightStrand) {
