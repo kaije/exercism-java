@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 class Gigasecond {
 
     LocalDateTime start;
+    static final int GIGASECOND_AS_SECONDS = 1000000000;
 
     Gigasecond(LocalDate moment) {
         this.start = moment.atStartOfDay();
@@ -14,7 +15,7 @@ class Gigasecond {
     }
 
     LocalDateTime getDateTime() {
-      return this.start.plusSeconds(1000000000);
+      return this.start.plusSeconds(GIGASECOND_AS_SECONDS);
     }
 
 }
